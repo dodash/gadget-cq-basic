@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module>
+  <ModulePrefs
+    title="Basic Open Social Gadget that uses CQ API" author="HCL Technologies"
+    description="A basic open social gadget.">
+    <Require feature="views" />
+  </ModulePrefs>
+  <Content type="html" href="http://localhost:9000" view="home,canvas,edit" />
+</Module>
