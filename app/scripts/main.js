@@ -9,7 +9,6 @@ function init() {
 	DEBUG&&console.log("init DEBUG", DEBUG);
 	DEBUG&&console.log("init entry");
 	DEBUG&&console.log("init isEditMode " + isEditMode);
-	/*setLoading(true);*/
 	loadMain();
 }
 

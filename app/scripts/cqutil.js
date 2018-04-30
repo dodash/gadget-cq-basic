@@ -203,7 +203,6 @@ function doPost(url, callback, postData) {
 
 function makeRequest(url, callback, params) {
     DEBUG&&console.log("makeRequest url, params ", url, params);
-    setLoading(true);
     gadgets.io.makeRequest(url, function(response) {
             DEBUG&&console.log("makeRequest response", response);
             DEBUG&&console.log("makeRequest gadgets.io.makeRequest response" + response);

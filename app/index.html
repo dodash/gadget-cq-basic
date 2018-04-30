@@ -8,9 +8,9 @@
 <title>my webapp</title>
 <style>
 div.output {
-    height: 100px;
-    background-color: powderblue;
-    overflow: scroll;
+	height: 100px;
+	background-color: powderblue;
+	overflow: scroll;
 }
 </style>
 <script type="text/javascript">
@@ -42,7 +42,14 @@ div.output {
     <![endif]-->
 
 	<div class="container">
-		<!-- Login section starts-->
+		<!-- Loading... container starts-->
+		<div id="loading" class="loading" style="display: none">
+			<img src="images/spinner.gif" class="spinner" alt="loading..."></img>
+			__MSG_loading__
+		</div>
+		<!-- Loading... container ends-->
+
+		<!-- Login container starts-->
 		<div id="loginMessage" style="display: none;">
 			<div>__MSG_mustLogin__</div>
 			<a id="link" href="#"><img src="images/login.gif"
@@ -52,50 +59,51 @@ div.output {
 				<div>__MSG_couldNotLogin__</div>
 			</div>
 		</div>
-		<!-- Login section ends-->
+		<!-- Login container ends-->
 
-		<!-- Servers section starts here -->
+		<!-- Servers container starts here -->
 		<div id="servers-container" style="display: none">
 			<label for="servers">__MSG_selectServer__</label> <select
 				name="servers" id="servers"></select>
 		</div>
-		<!-- Servers section ends here -->
+		<!-- Servers container ends here -->
 
+		<!-- Databases container starts here -->
 		<div id="databases-container" style="display: none">
 			<label for="databases">__MSG_selectDatabase__</label> <select
 				name="databases" id="databases"></select>
 			<button onclick="choseDatabase()">__MSG_loadWorkspace__</button>
 		</div>
+		<!-- Databases container ends here -->
 	</div>
+
+	<!-- Code for demostration of public methods available in cqutil.js starts here-->
 	<div>
-	   <div id="getRecordTypes">
-	       <div>
-	       getRecordTypes(dbUrl, callback)
-	       <button onclick="callGetRecordTypes()">Execute</button>
-	       </div>
-	       <div class="output" id="getRecordTypesOutput" >
-	       </div>
-	   </div>
+		<div id="getRecordTypes">
+			<div>
+				getRecordTypes(dbUrl, callback)
+				<button onclick="callGetRecordTypes()">Execute</button>
+			</div>
+			<div class="output" id="getRecordTypesOutput"></div>
+		</div>
 
-	    <div id="getUserDatabases">
-           <div>
-           getUserDatabases(dbUrl, callback)
-           <button onclick="callGetUserDatabases()">Execute</button>
-           </div>
-           <div class="output" id="getUserDatabasesOutput" >
-           </div>
-       </div>
+		<div id="getUserDatabases">
+			<div>
+				getUserDatabases(dbUrl, callback)
+				<button onclick="callGetUserDatabases()">Execute</button>
+			</div>
+			<div class="output" id="getUserDatabasesOutput"></div>
+		</div>
 
-        <div id="getSchemaRepositories">
-           <div>
-           getSchemaRepositories(cqWebUrl, callback)
-           <button onclick="callGetSchemaRepositories()">Execute</button>
-           </div>
-           <div class="output" id="getSchemaRepositoriesOutput" >
-           </div>
-       </div>
+		<div id="getSchemaRepositories">
+			<div>
+				getSchemaRepositories(cqWebUrl, callback)
+				<button onclick="callGetSchemaRepositories()">Execute</button>
+			</div>
+			<div class="output" id="getSchemaRepositoriesOutput"></div>
+		</div>
 	</div>
-
+	<!-- Code for demostration of public methods available in cqutil.js ends here-->
 
 	<!-- build:js scripts/vendor.js -->
 	<!-- bower:js -->
