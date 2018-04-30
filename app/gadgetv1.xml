@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module>
+	<ModulePrefs title="__MSG_title__" description="__MSG_description__"
+		author="HCL Technologies">
+		<Locale messages="nls/ALL_ALL.xml" />
+		<Require feature="dynamic-height" />
+		<Require feature="dynamic-width" />
+		<Require feature="setprefs" />
+		<Require feature="oauthpopup" />
+		<Require feature="settitle" />
+		<Require feature="views" />
+		<Require feature="core.log" />
+	</ModulePrefs>
+	<UserPref name="repo" datatype="hidden" default_value="" />
+	<UserPref name="db" datatype="hidden" default_value="" />
+	<UserPref name="oauthRequestTokenURI" datatype="hidden" />
+	<UserPref name="authorizationURI" datatype="hidden" />
+	<UserPref name="oauthAccessTokenURI" datatype="hidden" />
+	<UserPref name="logLevel" display_name="__MSG_logLevel__"
+		datatype="enum" default_value="4">
+		<EnumValue value="1" display_value="INFO" />
+		<EnumValue value="2" display_value="WARNING" />
+		<EnumValue value="3" display_value="ERROR" />
+		<EnumValue value="4" display_value="NONE" />
+	</UserPref>
+	<Content type="html" href="http://localhost:9000" view="home,canvas,edit" />
+</Module>
