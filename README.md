@@ -2,7 +2,7 @@
 ## Intro
 This is a project meant to be used as a starting point for creating an opensocial gadget that can interact with ClearQuest using OSLC API.
 
-This project was bootstrapped with [Web app generator]https://github.com/yeoman/generator-webapp).
+This project was bootstrapped with [Web app generator](https://github.com/yeoman/generator-webapp).
 
 ## Steps 
 First install the Node dependencies, this may take a few minutes.
