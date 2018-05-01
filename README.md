@@ -1,1 +1,41 @@
-"# gadget-cq-basic" 
+# An Basic OpenSocial Gadget that uses ClearQuest (CQ) API
+## Intro
+This is an example project for creating an opensocial gadget for hosting in an opensocial container.
+
+This project was bootstrapped with [Web app generator]https://github.com/yeoman/generator-webapp).
+For information on how to perform common tasks see the most recent version of the generator-webapp Readme [here](https://github.com/yeoman/generator-webapp/blob/master/README.md).
+
+## Steps 
+First install the necessary dependencies, this may take a few minutes.
+```
+npm install
+```
+
+Then install frontend dependencies
+```
+bower install
+```
+
+Run gulp serve to preview and watch for changes
+```
+gulp serve
+```
+You can now access the gadget from http://localhost:9000
+
+Run gulp serve:test to run the tests in the browser
+```
+gulp serve:test
+```
+Run gulp to build your webapp for production
+```
+gulp
+```
+Run gulp serve:dist to preview the production build
+```
+gulp serve:dist
+```
+
+## Adding to an Open Social Container (dashboard)
+To add this gadget to an open social container, specify the URL to the gadget.xml file served by this React application, e.g.
+http://localhost:9000/gadget.xml
+If you change the host/port, make sure you edit the gadget.xml and App.js file accordingly.
