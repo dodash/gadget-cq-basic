@@ -34,7 +34,7 @@ Run gulp serve:dist to preview the production build
 gulp serve:dist
 ```
 
-## Adding to an Open Social Container (dashboard)
+## Adding to an Open Social Container (like [DevOps Dashboards](http://www.cccqcommunity.com/dashboard_beta.html))
 To add this gadget to an open social container, specify the URL to the gadget.xml file served by this application, e.g.
 http://localhost:9000/gadget.xml
 If you change the host/port, make sure you edit the gadget.xml and App.js file accordingly.
