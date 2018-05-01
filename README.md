@@ -38,3 +38,8 @@ gulp serve:dist
 To add this gadget to an open social container, specify the URL to the gadget.xml file served by this application, e.g.
 http://localhost:9000/gadget.xml
 If you change the host/port, make sure you edit the gadget.xml and App.js file accordingly.
+
+## References
+* [cq-utils API documentation](https://github.com/dodash/cq-utils)
+* [CQ OSLC V2 API](https://jazz.net/wiki/bin/view/Main/CqOslcV2)
+* [CQ OSLC V1 API](https://jazz.net/wiki/bin/view/Main/RcmRestCmApi)
