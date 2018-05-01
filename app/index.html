@@ -8,16 +8,32 @@
 <title>Basic CQ gadget</title>
 <style>
 div.output {
-	height: 100px;
+	/* height: 100px;
 	background-color: powderblue;
-	overflow: scroll;
+	overflow: scroll; */
+	overflow-y: auto;
+	max-height: 400px;
+	min-height: 6em;
+}
+
+.methodName {
+	font-size: 18px
+}
+
+.methodDescription {
+	font-size: 14px
+}
+
+.method {
+	border-style: outset;
+	border-width: 2px;
 }
 </style>
 <script type="text/javascript">
-    var DEBUG = false;
-    var isEditMode = ("edit" == gadgets.util.getUrlParameters().view);
-    var prefs = new gadgets.Prefs();
-    </script>
+	var DEBUG = false;
+	var isEditMode = ("edit" == gadgets.util.getUrlParameters().view);
+	var prefs = new gadgets.Prefs();
+</script>
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <!-- Place favicon.ico in the root directory -->
 
@@ -75,35 +91,47 @@ div.output {
 			<button onclick="choseDatabase()">__MSG_loadWorkspace__</button>
 		</div>
 		<!-- Databases container ends here -->
+
+		<!-- Code for demonstration of public methods available in cqutil.js starts here-->
+		<div id="main-container" style="display: none">
+			<div id="getSchemaRepositories" class="method">
+				<div>
+					<span class="methodName">getSchemaRepositories(cqWebUrl,
+						callback)</span>: <span class="methodDescription">Get all schema
+						repositories of CQWeb</span>
+					<button onclick="callGetSchemaRepositories()">Try it</button>
+					&nbsp;
+					<button onclick="$('#getSchemaRepositoriesOutput').empty();adjustHeight();">Clear</button>
+				</div>
+				<pre class="output" id="getSchemaRepositoriesOutput"></pre>
+			</div>
+			<br>
+			<div id="getUserDatabases" class="method">
+				<div>
+					<span class="methodName">getUserDatabases(dbUrl, callback)</span>:
+					<span class="methodDescription">Get all user databases of a
+						schema repository database</span>
+					<button onclick="callGetUserDatabases()">Try it</button>
+					&nbsp;
+					<button onclick="$('#getUserDatabasesOutput').empty();adjustHeight();">Clear</button>
+				</div>
+				<pre class="output" id="getUserDatabasesOutput"></pre>
+			</div>
+			<br>
+			<div id="getRecordTypes" class="method">
+				<div>
+					<span class="methodName">getRecordTypes(dbUrl, callback)</span>: <span
+						class="methodDescription">Get all record types of a user
+						database</span>
+					<button onclick="callGetRecordTypes()">Try it</button>
+					&nbsp;
+					<button onclick="$('#getRecordTypesOutput').empty();adjustHeight();">Clear</button>
+				</div>
+				<pre class="output" id="getRecordTypesOutput"></pre>
+			</div>
+		</div>
+		<!-- Code for demostration of public methods available in cqutil.js ends here-->
 	</div>
-
-	<!-- Code for demostration of public methods available in cqutil.js starts here-->
-	<div>
-		<div id="getRecordTypes">
-			<div>
-				getRecordTypes(dbUrl, callback)
-				<button onclick="callGetRecordTypes()">Execute</button>
-			</div>
-			<div class="output" id="getRecordTypesOutput"></div>
-		</div>
-
-		<div id="getUserDatabases">
-			<div>
-				getUserDatabases(dbUrl, callback)
-				<button onclick="callGetUserDatabases()">Execute</button>
-			</div>
-			<div class="output" id="getUserDatabasesOutput"></div>
-		</div>
-
-		<div id="getSchemaRepositories">
-			<div>
-				getSchemaRepositories(cqWebUrl, callback)
-				<button onclick="callGetSchemaRepositories()">Execute</button>
-			</div>
-			<div class="output" id="getSchemaRepositoriesOutput"></div>
-		</div>
-	</div>
-	<!-- Code for demostration of public methods available in cqutil.js ends here-->
 
 	<!-- build:js scripts/vendor.js -->
 	<!-- bower:js -->
@@ -132,6 +160,8 @@ div.output {
 	<!-- build:js scripts/main.js -->
 	<script src="scripts/main.js"></script>
 	<!-- endbuild -->
-	<script>gadgets.util.registerOnLoadHandler(init)</script>
+	<script>
+		gadgets.util.registerOnLoadHandler(init)
+	</script>
 </body>
 </html>

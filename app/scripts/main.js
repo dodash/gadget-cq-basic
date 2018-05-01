@@ -21,6 +21,9 @@ function loadMain(){
 
 function main(){
 	DEBUG&&console.log("main");
+	currentSectionId = "main-container";
+	$("#" + currentSectionId).show();
+	adjustHeight();
 }
 
 function callGetRecordTypes() {
@@ -48,4 +51,9 @@ function callGetSchemaRepositories() {
 		var str = JSON.stringify(res, null, 2);
 		$("#getSchemaRepositoriesOutput").html(str);
 	});
+}
+
+function clear(id){
+	DEBUG&&console.log("clear id", id);
+	$("#" + id).empty();
 }

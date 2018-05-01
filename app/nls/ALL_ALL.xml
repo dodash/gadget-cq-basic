@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <messagebundle>
-  <msg name="title">Basic Open Social Gadget that uses CQ API</msg>
-  <msg name="description">A basic open social gadget.</msg>
+  <msg name="title">Basic CQ Gadget</msg>
+  <msg name="description">Basic Open Social Gadget that uses CQ API</msg>
   <msg name="itemsPerPage">Items per page</msg>
   <msg name="selectRepoAndDb">Select a user database to continue.</msg>
   <msg name="repo">Schema Repository</msg>

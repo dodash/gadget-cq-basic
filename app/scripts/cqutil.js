@@ -26,7 +26,7 @@
  * @param {object} response
  */
 
-var DEBUG=false, repo=null, db=null;
+var DEBUG=false, repo=null, db=null, currentSectionId=null;
 
 /**
  * Get base URL i.e. everything till the port number, e.g. http://localhost:8080
@@ -631,6 +631,11 @@ function setLoginMessageVisible(visible) {
 	DEBUG&&console.log("setLoginMessageVisible visible", visible);
         var loginMessageContainer = document.getElementById('loginMessage');
         loginMessageContainer.style.display = (visible) ? 'block' : 'none';
+        if(currentSectionId){
+        	var currentSection = $("#" + currentSectionId);
+            (visible) ? currentSection.hide() : currentSection.show();
+        }
+
         adjustHeight();
 }
 
