@@ -1,12 +1,11 @@
-# An Basic OpenSocial Gadget that uses ClearQuest (CQ) API
+# A basic OpenSocial Gadget that uses ClearQuest (CQ) OSLC API
 ## Intro
-This is an example project for creating an opensocial gadget for hosting in an opensocial container.
+This is a project meant to be used as a starting point for creating an opensocial gadget that can interact with ClearQuest using OSLC API.
 
 This project was bootstrapped with [Web app generator]https://github.com/yeoman/generator-webapp).
-For information on how to perform common tasks see the most recent version of the generator-webapp Readme [here](https://github.com/yeoman/generator-webapp/blob/master/README.md).
 
 ## Steps 
-First install the necessary dependencies, this may take a few minutes.
+First install the Node dependencies, this may take a few minutes.
 ```
 npm install
 ```
@@ -36,6 +35,6 @@ gulp serve:dist
 ```
 
 ## Adding to an Open Social Container (dashboard)
-To add this gadget to an open social container, specify the URL to the gadget.xml file served by this React application, e.g.
+To add this gadget to an open social container, specify the URL to the gadget.xml file served by this application, e.g.
 http://localhost:9000/gadget.xml
 If you change the host/port, make sure you edit the gadget.xml and App.js file accordingly.
