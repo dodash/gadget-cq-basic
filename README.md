@@ -54,3 +54,4 @@ http://localhost:9000/gadget.xml
 * [CQ OSLC V2 API](https://jazz.net/wiki/bin/view/Main/CqOslcV2)
 * [CQ OSLC V1 API](https://jazz.net/wiki/bin/view/Main/RcmRestCmApi)
 * [HCL provided OpenSocial gadget catalog](https://github.com/dodash/gadget-catalog)
+* [OpenSocial gadget Javascript API](http://opensocial.github.io/spec/2.5.1/Core-Gadget.xml#JavaScript-API-Reference)
