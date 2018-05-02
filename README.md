@@ -5,7 +5,13 @@ This is a project meant to be used as a starting point for creating an opensocia
 This project was bootstrapped with [Web app generator](https://github.com/yeoman/generator-webapp).
 
 ## Steps 
-First install the Node dependencies, this may take a few minutes.
+First install [Node](https://nodejs.org) 
+
+Then [fork](https://help.github.com/articles/fork-a-repo/) and [clone](https://git-scm.com/docs/git-clone) this repository on your machine
+
+Then open a command prompt to switch to the directory containing the repository that you cloned in the previous step.
+
+Now install Node dependencies, this may take a few minutes.
 ```
 npm install
 ```
@@ -19,7 +25,7 @@ Run gulp serve to preview and watch for changes
 ```
 gulp serve
 ```
-You can now access the gadget from http://localhost:9000
+You can now access the gadget from http://localhost:9000.
 
 Run gulp serve:test to run the tests in the browser
 ```
@@ -34,10 +40,14 @@ Run gulp serve:dist to preview the production build
 gulp serve:dist
 ```
 
-## Adding to an Open Social Container (like [DevOps Dashboards](http://www.cccqcommunity.com/dashboard_beta.html))
-To add this gadget to an open social container, specify the URL to the gadget.xml file served by this application, e.g.
+## Adding to [DevOps Dashboards](http://www.cccqcommunity.com/dashboard_beta.html))
+To add this gadget to the dashboards
+* Goto the Add Gadget section and specify the URL to the gadget.xml file served by this application, e.g.
 http://localhost:9000/gadget.xml
-If you change the host/port, make sure you edit the gadget.xml and App.js file accordingly.
+* Create an OAuth friend in the dashboards Administration section to establish friendship between ClearQuest and Dashboards as this gadget uses OAuth as the authentication mechanism while communicating with ClearQuest.
+* Add the gadget on a page in your dashboard
+* For more details on how to follow the above steps, refer to the [Devops Dashboards doucmentation](http://www.cccqcommunity.com/dashboard_beta.html)
+* If you change the host/port, make sure you edit the gadget.xml and App.js file accordingly.
 
 ## References
 * [cq-utils API documentation](https://github.com/dodash/cq-utils)
