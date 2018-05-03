@@ -58,14 +58,16 @@ div.output {
     <![endif]-->
 
 	<div class="container">
-		<!-- Loading... container starts-->
+		<!-- Loading container starts-->
+		<!-- The purpose of this code is to provide an indicator that the gadget is trying to load something. You are free to change the image (images/spinner.gif) whatever you want to use. You may also change the styling but it is expected that alteast id is not changes.  -->
 		<div id="loading" class="loading" style="display: none">
 			<img src="images/spinner.gif" class="spinner" alt="loading..."></img>
 			__MSG_loading__
 		</div>
-		<!-- Loading... container ends-->
+		<!-- Loading container ends-->
 
 		<!-- Login container starts-->
+		<!-- This gadget provides a mechanism to do OAuth based authentication with ClearQuest, and this code is part of that logic. So again it is expected that the id of the elements is not changed but you are free to change the styling.  -->
 		<div id="loginMessage" style="display: none;">
 			<div>__MSG_mustLogin__</div>
 			<a id="link" href="#"><img src="images/login.gif"
@@ -78,6 +80,7 @@ div.output {
 		<!-- Login container ends-->
 
 		<!-- Servers container starts here -->
+		<!-- This is a template used by the gadget to render a list of the available CQ servers that have OAuth friendship with Dashboards. -->
 		<div id="servers-container" style="display: none">
 			<label for="servers">__MSG_selectServer__</label> <select
 				name="servers" id="servers"></select>
@@ -85,6 +88,7 @@ div.output {
 		<!-- Servers container ends here -->
 
 		<!-- Databases container starts here -->
+		<!-- This is a template used by the gadget to render a list of the available CQ user databases that are available for access through the dashboards. -->
 		<div id="databases-container" style="display: none">
 			<label for="databases">__MSG_selectDatabase__</label> <select
 				name="databases" id="databases"></select>
@@ -101,7 +105,8 @@ div.output {
 						repositories of CQWeb</span>
 					<button onclick="callGetSchemaRepositories()">Try it</button>
 					&nbsp;
-					<button onclick="$('#getSchemaRepositoriesOutput').empty();adjustHeight();">Clear</button>
+					<button
+						onclick="$('#getSchemaRepositoriesOutput').empty();adjustHeight();">Clear</button>
 				</div>
 				<pre class="output" id="getSchemaRepositoriesOutput"></pre>
 			</div>
@@ -113,7 +118,8 @@ div.output {
 						schema repository database</span>
 					<button onclick="callGetUserDatabases()">Try it</button>
 					&nbsp;
-					<button onclick="$('#getUserDatabasesOutput').empty();adjustHeight();">Clear</button>
+					<button
+						onclick="$('#getUserDatabasesOutput').empty();adjustHeight();">Clear</button>
 				</div>
 				<pre class="output" id="getUserDatabasesOutput"></pre>
 			</div>
@@ -125,7 +131,8 @@ div.output {
 						database</span>
 					<button onclick="callGetRecordTypes()">Try it</button>
 					&nbsp;
-					<button onclick="$('#getRecordTypesOutput').empty();adjustHeight();">Clear</button>
+					<button
+						onclick="$('#getRecordTypesOutput').empty();adjustHeight();">Clear</button>
 				</div>
 				<pre class="output" id="getRecordTypesOutput"></pre>
 			</div>
