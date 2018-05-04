@@ -51,6 +51,8 @@ http://localhost:9000/gadget.xml
 * For more details on how to follow the above steps, refer to the [Devops Dashboards doucmentation](http://www.cccqcommunity.com/dashboard_beta.html)
 * If you change the host/port, make sure you edit the gadget.xml and App.js file accordingly.
 
+To know about the CQ specific code that this gadget provides refer to [gadget-cq-basic wiki](https://github.com/dodash/gadget-cq-basic/wiki)
+
 ## References
 * [Getting started with OpenSocial gadget development for DevOps Dashboards](https://github.com/dodash/gadget-cq-basic/wiki/Tutorial:-Getting-started-with-OpenSocial-gadget-development)
 * [cq-utils API documentation](https://github.com/dodash/cq-utils)
