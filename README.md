@@ -50,6 +50,7 @@ http://localhost:9000/gadget.xml
 * If you change the host/port, make sure you edit the gadget.xml and App.js file accordingly.
 
 ## References
+* [Getting started with OpenSocial gadget development for DevOps Dashboards](https://github.com/dodash/gadget-cq-basic/wiki/Tutorial:-Getting-started-with-OpenSocial-gadget-development)
 * [cq-utils API documentation](https://github.com/dodash/cq-utils)
 * [CQ OSLC V2 API](https://jazz.net/wiki/bin/view/Main/CqOslcV2)
 * [CQ OSLC V1 API](https://jazz.net/wiki/bin/view/Main/RcmRestCmApi)
