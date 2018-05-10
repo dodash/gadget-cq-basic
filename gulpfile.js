@@ -1,3 +1,4 @@
+"use strict";
 // generated on 2018-04-26 using generator-webapp 3.0.1
 const gulp = require('gulp');
 const gulpLoadPlugins = require('gulp-load-plugins');
@@ -5,7 +6,10 @@ const browserSync = require('browser-sync').create();
 const del = require('del');
 const wiredep = require('wiredep').stream;
 const runSequence = require('run-sequence');
-
+var mocha = require('gulp-mocha');
+var istanbul = require('gulp-istanbul');
+var tap = require('gulp-tap');
+var coveralls = require('gulp-coveralls');
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
 
@@ -175,4 +179,30 @@ gulp.task('default', () => {
     dev = false;
     runSequence(['clean', 'wiredep'], 'build', resolve);
   });
+});
+
+gulp.task('pre-test', function () {
+	  return gulp.src(['app/scripts/cqutil.js'])
+	    // Covering files
+	    .pipe(istanbul({includeUntested: true}))
+	    // Force `require` to return covered files
+	    .pipe(istanbul.hookRequire());
+});
+
+gulp.task('test', ['pre-test'], function () {
+	  return gulp.src(['test/spec/test.js'])
+	    .pipe(mocha())
+	    // Creating the reports after tests ran
+	    .pipe(istanbul.writeReports())
+	    // Enforce a coverage of at least 90%
+	    .pipe(istanbul.enforceThresholds({ thresholds: { global: 0 } }));
+});
+
+gulp.task('start', function(){
+	gulp.watch('test/spec/**/*.js', ['test']);
+});
+
+gulp.task('coveralls', ['test'], function() {
+	gulp.src('coverage/lcov.info')
+	.pipe(coveralls());
 });
