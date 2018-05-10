@@ -33,7 +33,7 @@ var DEBUG=false, repo=null, db=null, currentSectionId=null;
  * @returns {string} base URL
  */
 function getBasePath(){
-    return window.location.protocol + "//" + window.location.hostname + (window.location.port? (":" + window.location.port) : "");
+    return window.location.protocol + "://" + window.location.hostname + (window.location.port? (":" + window.location.port) : "");
 }
 
 /**
@@ -656,4 +656,12 @@ function loadPrefs(){
 	repo = prefs.getString("repo");
 	db = prefs.getString("db");
 	DEBUG&&console.log("loadPrefs exit repo, db", repo, db);
+}
+
+if(typeof exports !== 'undefined') {
+    exports.loadPrefs = loadPrefs;
+    exports.getBasePath = getBasePath;
+    exports.adjustHeight = adjustHeight;
+    exports.setVisibilityOf = setVisibilityOf;
+    exports.setLoading = setLoading;
 }
