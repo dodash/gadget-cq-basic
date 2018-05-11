@@ -166,9 +166,9 @@ describe('cqutil', function() {
 			global.DEBUG = true;
 		});
 
-		afterEach(function() {
+		/*afterEach(function() {
 			delete global.prefs; // <-- clean up here
-		});
+		});*/
 		it('should log "loadPrefs entry"', function() {
 			var spy = sinon.spy(console, 'log');
 			prefsMock = sinon.mock(prefs);
