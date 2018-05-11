@@ -1,4 +1,5 @@
-# A basic OpenSocial Gadget that uses ClearQuest (CQ) OSLC API
+# A basic OpenSocial Gadget that uses ClearQuest (CQ) OSLC API [![Build Status](https://travis-ci.org/dodash/gadget-cq-basic.svg?branch=master)](https://travis-ci.org/dodash/gadget-cq-basic) [![Coverage Status](https://coveralls.io/repos/github/dodash/gadget-basic/badge.svg?branch=master)]
+(https://coveralls.io/github/dodash/gadget-basic?branch=master)
 ## Intro
 This is a project meant to be used as a starting point for creating an opensocial gadget that can interact with ClearQuest using OSLC API.
 
