@@ -53,7 +53,17 @@ http://localhost:9000/gadget.xml
 * For more details on how to follow the above steps, refer to the [Devops Dashboards doucmentation](http://www.cccqcommunity.com/dashboard_beta.html)
 * If you change the host/port, make sure you edit the gadget.xml and App.js file accordingly.
 
-To know about the CQ specific code that this gadget provides refer to [gadget-cq-basic wiki](https://github.com/dodash/gadget-cq-basic/wiki)
+It contains the bolierplate code that you are most likely going to need to write any gadget for ClearQuest. 
+Whenever a user accesses any CQ gadget for the first time, he will need to login to CQ and then select the CQ user db that he wants to work with. Also since it involves sending requests to CQ over network and then waiting for the response, we also need to show a loading message to indicate that the gadget is waiting for loading something. This gadget provides these basic functionalities out of the box so that you can directly start writing the core functionality. Below is the description about these out of the box functionalities provided by this gadget:
+1. **OAuth based authentication with CQ**: This gadget contains the necessary code that is required to let you login to CQ using OAuth. However, before you can login to CQ, you need to establish OAuth friendship of the DevOps Dashboards with CQ and to do that you need to add an OAuth friend entry for your CQ deployment in the Administration section of the DevOps Dashboards. Refer to section 7. OAuth Friends in [DevOps Dashboards](http://www.cccqcommunity.com/uploads/1/0/2/7/102707030/2.hcl_dashboard_administration.pdf) regarding the details on how to add an OAuth friend.
+The code that handles the login part is present in
+* gadget-cq-basic\app\scripts\cqutil.js: _**makeRequest**_ method
+* gadget-cq-basic\app\index.html: **_loginMessage_** div
+
+2. UI for selecting CQ user db:  Renders a list of the available CQ servers (schema repositories) that have OAuth friendship with Dashboards as well as the list of user dbs for the selected schema repository.
+The code that handles it is located in:
+* gadget-cq-basic\app\index.html: **servers-container and databases-container** div elements
+* gadget-cq-basic\app\scripts\cqutil.js: _**fetchOAuthFriends, loadDatabases, handleLoadDatabases, handleOAuthFromServer**_ methods
 
 ## References
 * [Getting started with OpenSocial gadget development for DevOps Dashboards](https://github.com/dodash/dodash.github.io/blob/master/README.md)
