@@ -6,7 +6,7 @@ This is a project meant to be used as a starting point for creating an opensocia
 
 This project was bootstrapped with [Web app generator](https://github.com/yeoman/generator-webapp).
 
-Before following the below steps, please refer to [Getting started with OpenSocial gadget development](https://github.com/dodash/gadget-cq-basic/wiki/Tutorial:-Getting-started-with-OpenSocial-gadget-development) to make sure you are ready to follow the below steps.
+Before following the below steps, please refer to [Getting started with OpenSocial gadget development](https://github.com/dodash/dodash.github.io/blob/master/README.md) to make sure you are ready to follow the below steps.
 
 ## Steps 
 First install [Node](https://nodejs.org) 
