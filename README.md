@@ -56,7 +56,7 @@ http://localhost:9000/gadget.xml
 To know about the CQ specific code that this gadget provides refer to [gadget-cq-basic wiki](https://github.com/dodash/gadget-cq-basic/wiki)
 
 ## References
-* [Getting started with OpenSocial gadget development for DevOps Dashboards](https://github.com/dodash/gadget-cq-basic/wiki/Tutorial:-Getting-started-with-OpenSocial-gadget-development)
+* [Getting started with OpenSocial gadget development for DevOps Dashboards](https://github.com/dodash/dodash.github.io/blob/master/README.md)
 * [cq-utils API documentation](https://github.com/dodash/cq-utils)
 * [CQ OSLC V2 API](https://jazz.net/wiki/bin/view/Main/CqOslcV2)
 * [CQ OSLC V1 API](https://jazz.net/wiki/bin/view/Main/RcmRestCmApi)
