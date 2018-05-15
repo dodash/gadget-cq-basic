@@ -65,9 +65,11 @@ The code that handles it is located in:
 * gadget-cq-basic\app\index.html: **servers-container and databases-container** div elements
 * gadget-cq-basic\app\scripts\cqutil.js: _**fetchOAuthFriends, loadDatabases, handleLoadDatabases, handleOAuthFromServer**_ methods
 
+Refer to [cq-utils API documentation](https://github.com/dodash/gadget-cq-basic/blob/master/API.md) for a set of utility methods that help consume the ClearQuest OSLC API
+
 ## References
 * [Getting started with OpenSocial gadget development for DevOps Dashboards](https://github.com/dodash/dodash.github.io/blob/master/README.md)
-* [cq-utils API documentation](https://github.com/dodash/cq-utils)
+* [cq-utils API documentation](https://github.com/dodash/gadget-cq-basic/blob/master/API.md)
 * [CQ OSLC V2 API](https://jazz.net/wiki/bin/view/Main/CqOslcV2)
 * [CQ OSLC V1 API](https://jazz.net/wiki/bin/view/Main/RcmRestCmApi)
 * [HCL provided OpenSocial gadget catalog](https://github.com/dodash/gadget-catalog)
