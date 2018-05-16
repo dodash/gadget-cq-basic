@@ -1,4 +1,4 @@
-# Basic ClearQuest gadget  [![Build Status](https://travis-ci.org/dodash/gadget-cq-basic.svg?branch=master)](https://travis-ci.org/dodash/gadget-cq-basic) [![Coverage Status](https://coveralls.io/github/dodash/gadget-angular2/badge.svg?branch=master)](https://coveralls.io/github/dodash/gadget-angular2?branch=master)
+# Basic ClearQuest gadget  [![Build Status](https://travis-ci.org/dodash/gadget-cq-basic.svg?branch=master)](https://travis-ci.org/dodash/gadget-cq-basic) [![Coverage Status](https://coveralls.io/repos/github/dodash/gadget-cq-basic/badge.svg?branch=master)](https://coveralls.io/github/dodash/gadget-cq-basic?branch=master)
 # A basic OpenSocial Gadget that uses ClearQuest (CQ) OSLC API
 
 ## Intro
